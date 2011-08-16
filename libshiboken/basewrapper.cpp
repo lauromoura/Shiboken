@@ -456,6 +456,7 @@ void DtorCallerVisitor::done()
 }
 
 namespace Module { void init(); }
+namespace Conversions { void init(); }
 
 void init()
 {
@@ -464,6 +465,7 @@ void init()
         return;
 
     Module::init();
+    Conversions::init();
 
     initTypeResolver();
     PyEval_InitThreads();
