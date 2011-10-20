@@ -113,4 +113,13 @@ passReferenceToObjectType(const ObjectType& obj, int multiplier)
     return obj.objectName().size() * multiplier;
 }
 
+namespace NestedNamespace {
+const char *
+getSomeValue()
+{
+    return someValue;
+}
+
+} // namespace NestedNamespace
+
 } // namespace SampleNamespace

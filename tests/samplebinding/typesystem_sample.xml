@@ -157,6 +157,9 @@
             %PYARG_0 = %CONVERTTOPYTHON[%RETURN_TYPE](%0);
             </inject-code>
         </add-function>
+
+        <!-- Test fields inside namespaces -->
+        <namespace-type name="NestedNamespace" />
     </namespace-type>
 
     <namespace-type name="RemovedNamespace1" generate='no'>

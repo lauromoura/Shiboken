@@ -88,6 +88,7 @@ ${CMAKE_CURRENT_BINARY_DIR}/sample/samplenamespace_someclass_someinnerclass_okth
 ${CMAKE_CURRENT_BINARY_DIR}/sample/samplenamespace_someclass_someinnerclass_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/sample/samplenamespace_someclass_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/sample/samplenamespace_derivedfromnamespace_wrapper.cpp
+${CMAKE_CURRENT_BINARY_DIR}/sample/samplenamespace_nestednamespace_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/sample/simplefile_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/sample/size_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/sample/sizef_wrapper.cpp

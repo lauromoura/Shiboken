@@ -134,6 +134,12 @@ LIBSAMPLE_API double passReferenceToValueType(const Point& point, double multipl
 // Add a new signature on type system with only a ObjectType pointer as parameter.
 LIBSAMPLE_API int passReferenceToObjectType(const ObjectType& obj, int multiplier);
 
+namespace NestedNamespace {
+    const char* const someValue = "SomeValue";
+
+    const char* getSomeValue();
+} // namespace NestedNamespace
+
 } // namespace SampleNamespace
 
 #endif // SAMPLENAMESPACE_H

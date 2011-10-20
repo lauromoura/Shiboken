@@ -56,5 +56,10 @@ class TestClassesUnderNamespace(unittest.TestCase):
         self.assertEquals(str(SampleNamespace.SomeClass.SomeInnerClass.OkThisIsRecursiveEnough), "<%s 'sample.SampleNamespace.SomeClass.SomeInnerClass.OkThisIsRecursiveEnough'>"%TYPE_STR)
         self.assertEquals(str(SampleNamespace.SomeClass.SomeInnerClass.OkThisIsRecursiveEnough.NiceEnum), "<%s 'sample.SampleNamespace.SomeClass.SomeInnerClass.OkThisIsRecursiveEnough.NiceEnum'>"%TYPE_STR)
 
+class TestNamespaceField(unittest.TestCase):
+
+    def testField(self):
+        self.assertEqual(SampleNamespace.NestedNamespace.someValue, SampleNamespace.NestedNamespace.getSomeValue())
+
 if __name__ == '__main__':
     unittest.main()
