@@ -72,12 +72,23 @@ const char* toCString(PyObject* str)
 {
     if (str == Py_None)
         return NULL;
+
+
+    if (PyUnicode_Check(str)) {
 #ifdef IS_PY3K
-    if (PyUnicode_Check(str))
         return _PyUnicode_AsString(str);
+#else
+        const char* result = NULL;
+        Py_ssize_t size = 0;
+        if (PyObject_AsCharBuffer(str, &result, &size) < 0)
+            return 0;
+
+        return result;
 #endif
+    }
     if (PyBytes_Check(str))
         return PyBytes_AS_STRING(str);
+
     return 0;
 }
 
