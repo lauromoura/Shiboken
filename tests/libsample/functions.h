@@ -50,6 +50,7 @@ LIBSAMPLE_API std::list<Complex> gimmeComplexList();
 LIBSAMPLE_API Complex sumComplexPair(std::pair<Complex, Complex> cpx_pair);
 
 LIBSAMPLE_API int countCharacters(const char* text);
+LIBSAMPLE_API const char *identity(const char*);
 LIBSAMPLE_API char* makeCString();
 LIBSAMPLE_API const char* returnCString();
 

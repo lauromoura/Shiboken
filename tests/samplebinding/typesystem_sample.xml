@@ -81,6 +81,7 @@
     <function signature="acceptIntReference(int&amp;)" />
     <function signature="acceptOddBoolReference(OddBool&amp;)" />
     <function signature="countCharacters(const char*)" />
+    <function signature="identity(const char*)" />
     <function signature="gimmeInt()" />
     <function signature="gimmeDouble()" />
     <function signature="makeCString()" />

@@ -81,6 +81,12 @@ countCharacters(const char* text)
     return count;
 }
 
+const char*
+identity(const char *text)
+{
+    return text;
+}
+
 char*
 makeCString()
 {
