@@ -76,6 +76,10 @@ public:
     virtual void callMe() {}
     void callCallMe() { callMe(); }
 
+    // Binding modification: code injection that replaces the type of virtual return.
+    virtual int power(int a1) { return a1; }
+    int callPower(int a1) { return power(a1); }
+
     // Passing reference to pointers.
     virtual bool createStr(const char* text, Str*& ret);
     bool callCreateStr(const char* text, Str*& ret) { return createStr(text, ret); }

@@ -128,6 +128,27 @@ class PrettyErrorMessageTest(unittest.TestCase):
         obj = ExtendedVirtualMethods()
         self.assertRaises(RuntimeWarning, obj.callStrListToStdList, StrList())
 
+class SquarePower(VirtualMethods):
+    def power(self, x):
+        return x**2
+
+class CubePower(VirtualMethods):
+    def power(self, x):
+        return x**3
+
+class ObjectAsReturn(unittest.TestCase):
+
+    def testIt(self):
+        obj = VirtualMethods()
+        self.assertEqual(obj.callPower(2), 2)
+        self.assertEqual(obj.callPower(3), 3)
+        x = SquarePower()
+        self.assertEqual(x.callPower(2), 4)
+        self.assertEqual(x.callPower(3), 9)
+        y = CubePower()
+        self.assertEqual(y.callPower(2), 8)
+        self.assertEqual(y.callPower(3), 27)
+
 if __name__ == '__main__':
     unittest.main()
 

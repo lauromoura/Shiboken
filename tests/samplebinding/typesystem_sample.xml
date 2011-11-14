@@ -1331,6 +1331,11 @@
                 PyTuple_SET_ITEM(%PYARG_0, 1, _item_);
             </inject-code>
         </modify-function>
+        <modify-function signature="power(int)">
+            <modify-argument index="return">
+                <replace-type modified-type="PyObject"/>
+            </modify-argument>
+        </modify-function>
         <template name="fix_int*,int*,int*,int*">
             int a0, a1, a2, a3;
             %BEGIN_ALLOW_THREADS
